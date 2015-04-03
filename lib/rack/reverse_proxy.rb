@@ -65,7 +65,7 @@ module Rack
         target_request.body_stream    = source_request.body
       end
 
-      target_request.content_length = source_request.content_length || 0
+      target_request.content_length = source_request.body.bytesize
       target_request.content_type   = source_request.content_type if source_request.content_type
 
       # Create a streaming response (the actual network communication is deferred, a.k.a. streamed)
