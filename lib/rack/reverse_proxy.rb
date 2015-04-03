@@ -4,7 +4,7 @@ require "rack-proxy"
 require "rack/reverse_proxy_matcher"
 require "rack/exception"
 
-module Rackbyte
+module Rack
   class ReverseProxy
     include NewRelic::Agent::Instrumentation::ControllerInstrumentation if defined? NewRelic
 
